@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock title %}
+{% block header %}Главная{% endblock header %}
+
+{% block content %}
+    <div class="container mx-auto px-4">
+        <h1 class="text-lg mb-4">Цены за месяц обучения</h1>
+        <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="transition duration-500 ease-in-out bg-blue-100 rounded-md p-8">
+                Компания <br>
+                (Курсы)</div>
+            <div class="transition duration-500 ease-in-out bg-blue-100 rounded-md p-8">
+                Цена за <br>
+                Python</div>
+            <div class="transition duration-500 ease-in-out bg-blue-100 rounded-md p-8">
+                Цена за <br>
+                Java Script</div>
+            {% for p in posts %}
+            <div class="transition duration-500 ease-in-out bg-blue-100 hover:bg-blue-400 rounded-md p-8"><a href="#">
+                {{ p[0] }}
+            </a></div>
+            <div class="transition duration-500 ease-in-out bg-blue-100 hover:bg-blue-400 rounded-md p-8">
+                {{ p[2] }}</div>
+            <div class="transition duration-500 ease-in-out bg-blue-100 hover:bg-blue-400 rounded-md p-8">
+                {{ p[1] }}</div>
+            {% endfor %}
+        </div>
+          <div class="flex justify-center py-8">
+            <svg class="animate-bounce w-6 h-6 text-amber-900" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
+    </div>
+{% endblock content %}
