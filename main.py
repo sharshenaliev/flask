@@ -7,9 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     posts = [
-        ['Attractor', 10000, 10000],
-        ['Makers', 15000, 15000],
-        ['Codify', 12000, 12000]
+        ['https://attractor-school.com/', 'Attractor', 18000],
+        ['https://makers.kg/', 'Makers', 15000],
+        ['https://www.codifylab.com/ru/courses', 'Codify', 12000]
         ]
     return render_template('index.html', posts=posts)
 
